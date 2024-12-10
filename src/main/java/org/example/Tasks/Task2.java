@@ -6,8 +6,5 @@ public class Task2 {
         String word="IPhone 15 Pro Max";
         System.out.println("In a String presents: "+word.replaceAll("[a-z 0-9]","").length()+" alpha characters");
 
-
-
-
     }
 }

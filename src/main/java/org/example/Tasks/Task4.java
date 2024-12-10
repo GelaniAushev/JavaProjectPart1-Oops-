@@ -3,6 +3,8 @@ package org.example.Tasks;
 public class Task4 {
     public static void main(String[] args) {
 
+        //This code written by Vera
+
         String word="level";
         StringBuilder sb=new StringBuilder(word);
         sb.reverse();

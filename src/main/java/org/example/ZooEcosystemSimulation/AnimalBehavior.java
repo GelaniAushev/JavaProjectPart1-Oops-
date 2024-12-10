@@ -2,6 +2,9 @@ package org.example.ZooEcosystemSimulation;
 
 public interface AnimalBehavior {
 
+    //This code written by Gelani Aushev
+
+
     void eat();
 
     void sleep();

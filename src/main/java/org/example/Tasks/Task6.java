@@ -3,6 +3,9 @@ package org.example.Tasks;
 public class Task6 {
 
     public static int countVowels(String word) {
+
+        //This code written by Gelani Aushev
+
         word = "documentation";
         int vowelsCount = 0;
         for (char c : word.toCharArray()) {

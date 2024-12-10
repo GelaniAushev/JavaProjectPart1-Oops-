@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Task8 {
     public static void main(String[] args) {
 
+        //This code written by Natalya Pan
+
         ArrayList<String> word=new ArrayList<>();
         word.add("Asghar");
         word.add("Muhammad");

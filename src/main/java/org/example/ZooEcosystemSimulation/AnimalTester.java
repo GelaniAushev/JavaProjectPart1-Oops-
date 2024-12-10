@@ -3,6 +3,8 @@ package org.example.ZooEcosystemSimulation;
 public class AnimalTester {
     public static void main(String[] args) {
 
+        //This code written by Gelani Aushev
+
         Lion lion=new Lion();
         lion.eat();
         lion.makeSound();

@@ -5,32 +5,29 @@ import java.util.Map;
 
 public class Task9 {
 
-    public static char findFirstNonRepeatingChar(String str) {
+    //This code written by Martin Schwarz
 
-        Map<Character, Integer> charCountMap = new LinkedHashMap<>();
 
-        for (char c : str.toCharArray()) {
-            charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
-        }
-
-        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
-            if (entry.getValue() == 1) {
-                return entry.getKey();
-            }
-        }
-
-        return '\0';
-    }
+    // Find the First Non-Repeating Character in a String: Given a string, find and
+    // return the first non-repeating character. For example, in the string
+    // "abracadabra", the first non-repeating character is 'c'.
 
     public static void main(String[] args) {
+        String s = "abracadabra";
 
-        String input = "abracadabra";
-        char result = findFirstNonRepeatingChar(input);
-        if (result != '\0') {
-            System.out.println("The first non-repeating character is: " + result);
-        } else {
-            System.out.println("No non-repeating character found.");
-        }
+        Map<Character, Integer> freqMap = new LinkedHashMap<>();
 
+        for(Character c : s.toCharArray())
+            freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
+
+        boolean found = false;
+        for (Map.Entry<Character, Integer> e : freqMap.entrySet())
+            if (e.getValue() == 1) {
+                System.out.println("The first non-repeating char in the word '" + s + "' is '" + e.getKey() + "'.");
+                found = true;
+                break;
+            }
+        if (!found)
+            System.out.println("The word '" + s + "' does not contain any non-repeated characters.");
     }
 }

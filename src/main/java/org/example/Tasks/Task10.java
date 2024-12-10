@@ -1,24 +1,26 @@
 package org.example.Tasks;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.*;
 
 public class Task10 {
     public static void main(String[] args) {
 
-        ArrayList<String> words = new ArrayList<>();
-        words.add("ShadowHeart");
-        words.add("Astarion");
-        words.add("Gale");
-        words.add("Astarion");
-        words.add("Gale");
+        //This code written by Martin Schwarz
 
-        HashSet<String> set=new HashSet<>(words);
+        // How can you remove all duplicates from ArrayList?
 
-        ArrayList<String> removedWords=new ArrayList<>(set);
+        List<Integer> integerList = new ArrayList<>();
+        integerList.addAll(Arrays.asList(2, 13, 10, 2, 5, 5, 10, 11, 12, 11, 13, 1, 1));
 
-        System.out.println("All words: "+words);
-        System.out.println("Words after removing duplicates: "+removedWords);
+        System.out.println("The given list:");
+        System.out.println(integerList);
+        System.out.println();
 
+        LinkedHashSet<Integer> uniqueIntSet = new LinkedHashSet<>(integerList);
+        integerList.clear();
+        integerList.addAll(uniqueIntSet);
+
+        System.out.println("The same list, with the same order, but duplicates were removed:");
+        System.out.println(integerList);
     }
 }
